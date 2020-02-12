@@ -22,16 +22,46 @@
 
   <!-- Custom styles for this template -->
   <link href="https://startbootstrap.com/template-overviews/agency" rel="stylesheet">
-  <link href="css/modern-business.css" rel="stylesheet">
-
+    
+  <!-- Custom styles for this template -->
+  <link href="https://startbootstrap.com/template-overviews/modern-business" rel="stylesheet">
+    
 </head>
+    
+<style>
+    .carousel-item {
+        height: 65vh;
+        min-height: 300px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+    .navbar-brand {
+        color:white !important;
+/*         font-family: sans-serif !important; */
+    }
+    .btn-primary, ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover{
+        background-color:#D50032!important;
+        border-color:#D50032 !important;
+    }
+    .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+        background-color:#EF4A81 !important;
+        border-color:#EF4A81 !important;
+        box-shadow:0 0 0 .2rem #EF4A81 !important
+    }
+    .nav-link:hover, .nav-link.active {
+        color: #D50032 !important
+    }
+    </style>
 
 <body id="page-top">
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">UIC</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">UIC Bookstore</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -70,13 +100,16 @@
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">About Us</a>
       </div>
     </div>
+  </header>
       
 <!-- Carousel Div -->
+<header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
         <!-- Slide One - Set the background image for this slide in the line below -->
@@ -98,6 +131,13 @@
           <div class="carousel-caption d-none d-md-block">
             <h3>Third Slide</h3>
             <p>This is a description for the third slide.</p>
+          </div>
+        </div>
+        <!-- Slide Four - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Fourth Slide</h3>
+            <p>This is a description for the fourth slide.</p>
           </div>
         </div>
       </div>
@@ -873,7 +913,6 @@
 
   <!-- Custom scripts for this template -->
   <script src="https://blackrockdigital.github.io/startbootstrap-agency/js/agency.min.js"></script>
-
 </body>
 
 </html>

@@ -15,6 +15,8 @@
 
   <!-- Custom fonts for this template -->
   <link href="https://blackrockdigital.github.io/startbootstrap-agency/css/agency.min.css" rel="stylesheet" type="text/css">
+  <link href="https://blackrockdigital.github.io/startbootstrap-agency/vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+  <link href="https://blackrockdigital.github.io/startbootstrap-agency/#" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -22,13 +24,16 @@
 
   <!-- Custom styles for this template -->
   <link href="https://startbootstrap.com/template-overviews/agency" rel="stylesheet">
-    
-  <!-- Custom styles for this template -->
   <link href="https://startbootstrap.com/template-overviews/modern-business" rel="stylesheet">
+  <link href="https://blackrockdigital.github.io/startbootstrap-agency/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     
 </head>
     
 <style>
+    .text-primary {
+        color:#D50032 !important;
+    }
+    
     .carousel-item {
         height: 65vh;
         min-height: 300px;
@@ -37,26 +42,61 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-}
+    }
+    
     .navbar-brand {
         color:white !important;
     }
-    .btn-primary, ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+    
+    .btn-primary, .navbar-toggler, ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
         background-color:#D50032!important;
         border-color:#D50032 !important;
     }
+    
     .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
         background-color:#EF4A81 !important;
         border-color:#EF4A81 !important;
         box-shadow:0 0 0 .2rem #EF4A81 !important;
     }
+    
     .nav-link:hover, .nav-link.active {
         color: #D50032 !important;
     }
+    
+    .fa-stack {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    position: relative;
+    vertical-align: middle;
+    width: 2.5em;
+    }
+    
     .timeline-image {
         background-color: #D50032 !important;
     }
-    </style>
+    
+    .portfolio-item .portfolio-link .portfolio-hover {
+        background: rgba(213, 0, 50, .6) !important;
+    }
+    
+    @media (min-width:992px) {
+ #mainNav {
+  padding-top:25px;
+  padding-bottom:25px;
+  transition:padding-top .3s,padding-bottom .3s;
+  border:none;
+  background-color:#212529
+ }
+::-moz-selection {
+ background: #B7E9F7;
+ text-shadow:none
+}
+::selection {
+ background: #B7E9F7;
+ text-shadow:none
+}
+</style>
 
 <body id="page-top">
 
@@ -93,17 +133,6 @@
     </div>
   </nav>
 
-  <!-- Header -->
-<!--   <header class="masthead">
-    <div class="container">
-      <div class="intro-text">
-        <div class="intro-lead-in">The best of the best!</div>
-        <div class="intro-heading text-uppercase">UIC Bookstore</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">About Us</a>
-      </div>
-    </div>
-  </header> -->
-      
 <!-- Carousel Div -->
 <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -115,31 +144,29 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <!-- Slide One - Set the background image for this slide in the line below -->
-        <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+        <div class="carousel-item active" style="filter: brightness(70%); background-image: url('https://www.uicbookstore.org/images/Front1.jpg')">
           <div class="carousel-caption d-none d-md-block">
-            <h3>First Slide</h3>
+            <h1>First Slide</h1>
             <p>This is a description for the first slide.</p>
           </div>
         </div>
         <!-- Slide Two - Set the background image for this slide in the line below -->
         <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
           <div class="carousel-caption d-none d-md-block">
-            <h3>Second Slide</h3>
+            <h1>Second Slide</h1>
             <p>This is a description for the second slide.</p>
           </div>
         </div>
         <!-- Slide Three - Set the background image for this slide in the line below -->
         <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
           <div class="carousel-caption d-none d-md-block">
-            <h3>Third Slide</h3>
+            <h1>Third Slide</h1>
             <p>This is a description for the third slide.</p>
           </div>
         </div>
         <!-- Slide Four - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+        <div class="carousel-item" style="object-fit:contain; background-image: url('https://www.uicbookstore.org/images/Front1.jpg')">
           <div class="carousel-caption d-none d-md-block">
-            <h3>Fourth Slide</h3>
-            <p>This is a description for the fourth slide.</p>
           </div>
         </div>
       </div>
@@ -167,7 +194,7 @@
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-user-friends fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Students</h4>
           <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
@@ -175,7 +202,7 @@
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-book fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Books</h4>
           <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
@@ -191,7 +218,7 @@
           <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-dollar-sign fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Payment Plans</h4>
           <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
@@ -199,7 +226,7 @@
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-info-circle fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Customer Service</h4>
           <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
@@ -207,9 +234,9 @@
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-tshirt fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Offical Wear</h4>
+          <h4 class="service-heading">Official Wear</h4>
           <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
         </div>
       </div>
@@ -233,7 +260,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+            <img class="img-fluid" style="height:180px; width:400px" src="https://www.uscbookstore.com/site/resources/img/textbooks/textbook_rentals.jpg" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Books</h4>
@@ -247,7 +274,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+            <img class="img-fluid" style="height:180px; width:400px" src="https://i.pinimg.com/736x/41/4a/07/414a07cb171090e5ea2009d2f6ed8f06.jpg" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Rentals</h4>
@@ -261,7 +288,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+            <img class="img-fluid" style="height:180px; width:400px" src="https://i.ytimg.com/vi/UC2pJeJnt_M/maxresdefault.jpg" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Clothing</h4>
@@ -275,7 +302,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+            <img class="img-fluid" style="height:180px; width:400px" src="https://cdn2.lamag.com/wp-content/uploads/sites/6/2016/05/Snax1.jpg" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Snacks</h4>
@@ -289,7 +316,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+            <img class="img-fluid" style="height:180px; width:400px" src="https://library.lmu.edu/media/lmulibrary/images/2016_Redesign_InfoDesk.jpg" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Information</h4>
@@ -303,7 +330,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+            <img class="img-fluid" style="height:180px; width:400px" src="https://www.maketecheasier.com/assets/uploads/2017/07/officialcharger-connected-800x400.jpg" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Accessories</h4>
@@ -311,13 +338,13 @@
           </div>
         </div>
           <div class="col-md-6 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal7">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+            <img class="img-fluid" style="height:180px; width:400px" src="https://www.prettyopinionated.com/wp-content/uploads/2016/08/BIC-Back-to-School-Supplies-Pin-690x460.jpg" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Supplies</h4>
@@ -325,13 +352,13 @@
           </div>
         </div>
           <div class="col-md-6 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal8">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+            <img class="img-fluid" style="height:180px; width:400px" src="https://blog.leonardo.com/wp-content/uploads/2019/11/Secure-Your-Hotel-Media-400x180.jpg" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Electronics</h4>
@@ -356,7 +383,7 @@
           <ul class="timeline">
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
+                <img class="rounded-circle img-fluid" src="https://vickyflipfloptravels.com/wp-content/uploads/2018/12/More-skyline-Chicago-170x170.jpg" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -370,7 +397,7 @@
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
+                <img class="rounded-circle img-fluid" src="https://media.canadianunderwriter.ca/uploads/2005/11/112110-74338-170x170.jpg" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -384,7 +411,7 @@
             </li>
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                <img class="rounded-circle img-fluid" style="height: 100%" src="https://fastly.4sqi.net/img/general/600x600/aNEapvRTY75AtIcyX2DpIbRHkinL198HLemgmGFniJE.jpg" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -398,7 +425,7 @@
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
+                <img class="rounded-circle img-fluid" src="https://fastly.4sqi.net/img/general/200x200/1345234_ByLFvjpIXKQLGmpgPsO5qJumvttojWV6Pg-kr6bbZHM.jpg" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -412,7 +439,7 @@
             </li>
              <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                <img class="rounded-circle img-fluid" src="https://www.xylon.it/wp-content/uploads/2018/03/Eggersito-170x170.png" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -442,16 +469,16 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+          <h2 class="section-heading text-uppercase">Meet the Team</h2>
           <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-            <h4>Kay Garland</h4>
-            <p class="text-muted">Lead Designer</p>
+            <img class="mx-auto rounded-circle" src="https://www.intrideo.com/wp-content/uploads/2018/04/Smiling-People-And-Happy-People-150x150.jpeg" alt="">
+            <h4>Gee Gee</h4>
+            <p class="text-muted">Lead Director</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -473,9 +500,9 @@
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-            <h4>Larry Parker</h4>
-            <p class="text-muted">Lead Marketer</p>
+            <img class="mx-auto rounded-circle" src="https://www.plat4mation.com/wp-content/uploads/2018/02/Roel-Schoenmakers-225x225.png" alt="">
+            <h4>Larry Lobster</h4>
+            <p class="text-muted">Assistant Director</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -497,9 +524,9 @@
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-            <h4>Diana Pertersen</h4>
-            <p class="text-muted">Lead Developer</p>
+            <img class="mx-auto rounded-circle" src="https://econ.uconn.edu/wp-content/uploads/sites/681/2016/08/PRitter2016-150x150-1.jpg" alt="">
+            <h4>Diana Slep</h4>
+            <p class="text-muted">Lead Coordinator</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -529,7 +556,7 @@
   </section>
 
   <!-- Clients -->
-  <section class="py-5">
+<!--   <section class="py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6">
@@ -554,7 +581,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
     
 <!-- Coming Soon -->
 <section class="page-section" id="coming-soon">
@@ -577,7 +604,7 @@
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-print fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Printers</h4>
           <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
@@ -585,7 +612,7 @@
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-mug-hot fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Student Lounge</h4>
           <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
@@ -712,18 +739,18 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
+                <h2 class="text-uppercase">Books</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <img class="img-fluid d-block mx-auto" src="https://www.uscbookstore.com/site/resources/img/textbooks/textbook_rentals.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                 <ul class="list-inline">
                   <li>Date: January 2017</li>
-                  <li>Client: Threads</li>
+                  <li>Client: Student</li>
                   <li>Category: Illustration</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
-                  Close Project</button>
+                  Close </button>
               </div>
             </div>
           </div>
@@ -746,18 +773,18 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
+                <h2 class="text-uppercase">Rentals</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <img class="img-fluid d-block mx-auto" src="https://i.pinimg.com/736x/41/4a/07/414a07cb171090e5ea2009d2f6ed8f06.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Explore</li>
+                  <li>Date: May 2014</li>
+                  <li>Client: Student</li>
                   <li>Category: Graphic Design</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
-                  Close Project</button>
+                  Close </button>
               </div>
             </div>
           </div>
@@ -780,18 +807,18 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
+                <h2 class="text-uppercase">Clothing</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <img class="img-fluid d-block mx-auto" src="https://i.ytimg.com/vi/UC2pJeJnt_M/maxresdefault.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                 <ul class="list-inline">
                   <li>Date: January 2017</li>
-                  <li>Client: Finish</li>
-                  <li>Category: Identity</li>
+                  <li>Client: Student</li>
+                  <li>Category: Science</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
-                  Close Project</button>
+                  Close </button>
               </div>
             </div>
           </div>
@@ -814,18 +841,18 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
+                <h2 class="text-uppercase">Snacks</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <img class="img-fluid d-block mx-auto" src="https://cdn2.lamag.com/wp-content/uploads/sites/6/2016/05/Snax1.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Lines</li>
-                  <li>Category: Branding</li>
+                  <li>Date: March 2017</li>
+                  <li>Client: Teacher</li>
+                  <li>Category: Science</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
-                  Close Project</button>
+                  Close </button>
               </div>
             </div>
           </div>
@@ -848,18 +875,18 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
+                <h2 class="text-uppercase">Information</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <img class="img-fluid d-block mx-auto" src="https://library.lmu.edu/media/lmulibrary/images/2016_Redesign_InfoDesk.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Southwest</li>
-                  <li>Category: Website Design</li>
+                  <li>Date: December 2017</li>
+                  <li>Client: Teacher</li>
+                  <li>Category: Design</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
-                  Close Project</button>
+                  Close </button>
               </div>
             </div>
           </div>
@@ -882,18 +909,52 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
+                <h2 class="text-uppercase">Accessories</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <img class="img-fluid d-block mx-auto" src="https://www.maketecheasier.com/assets/uploads/2017/07/officialcharger-connected-800x400.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Window</li>
-                  <li>Category: Photography</li>
+                  <li>Date: April 2017</li>
+                  <li>Client: Student</li>
+                  <li>Category: Science</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
-                  Close Project</button>
+                  Close </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+    
+  <!-- Modal 7 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Supplies</h2>
+                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <img class="img-fluid d-block mx-auto" src="https://www.prettyopinionated.com/wp-content/uploads/2016/08/BIC-Back-to-School-Supplies-Pin-690x460.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <ul class="list-inline">
+                  <li>Date: January 2018</li>
+                  <li>Client: Student</li>
+                  <li>Category: Science</li>
+                </ul>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close </button>
               </div>
             </div>
           </div>
@@ -901,6 +962,41 @@
       </div>
     </div>
   </div>
+    
+      <!-- Modal 8 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Electronics</h2>
+                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <img class="img-fluid d-block mx-auto" src="https://blog.leonardo.com/wp-content/uploads/2019/11/Secure-Your-Hotel-Media-400x180.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <ul class="list-inline">
+                  <li>Date: March 2019</li>
+                  <li>Client: Window</li>
+                  <li>Category: Photography</li>
+                </ul>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="https://blackrockdigital.github.io/startbootstrap-agency/vendor/jquery/jquery.min.js"></script>
